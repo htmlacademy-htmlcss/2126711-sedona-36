@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Евгений Пимкин](https://up.htmlacademy.ru/htmlcss/36/user/2126711).
-* Наставник: `Неизвестно`.
+* Наставник:[Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
 
 ---
 
