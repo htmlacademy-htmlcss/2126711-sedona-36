@@ -15,18 +15,21 @@
         <img class="page-header-logo" alt="Логотип сайта Седона" src="images/logo.svg" width="140" height="70">
       </a>
       <nav class="navigation">
-        <ul class="navigation-list">
+        <ul class="navigation-main-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="about.html">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
+      </nav>
+
+      <nav class="navigation-user">
+        <ul class="navigation-user-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
@@ -105,17 +108,23 @@
         <h2 class="visually-hidden">Главные преимущества</h2>
         <ul class="advantages-list">
           <li class="advantages-item advantages-item-sky">
-            <img class="advantages-logo" src="images/house.svg" width="75" height="72">
+            <div class="advantages-logo-image">
+              <img class="advantages-logo" src="images/house.svg" width="75" height="72">
+            </div>
             <h3 class="advantages-title">Жильё</h3>
             <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="advantages-item advantages-item-white">
-            <img class="advantages-logo" src="images/food.svg" width="74" height="70">
+            <div class="advantages-logo-image">
+              <img class="advantages-logo" src="images/food.svg" width="74" height="70">
+            </div>
             <h3 class="advantages-title">Еда</h3>
             <p class="advantages-description">Все достопримечательности находятся очень близко</p>
           </li>
           <li class="advantages-item advantages-item-sky">
-            <img class="advantages-logo" src="images/surprise.svg" width="64" height="76">
+            <div class="advantages-logo-image">
+              <img class="advantages-logo" src="images/surprise.svg" width="64" height="76">
+            </div>
             <h3 class="advantages-title">Сувениры</h3>
             <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
@@ -135,8 +144,10 @@
         <p class="newsletter-header">Подпишитесь на рассылку</p>
         <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
-          <button class="button newsletter-button">Подписаться</button>
+          <label class="visually-hidden">
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
+            <button class="button newsletter-button">Подписаться</button>
+          </label>
         </form>
       </section>
     </main>
