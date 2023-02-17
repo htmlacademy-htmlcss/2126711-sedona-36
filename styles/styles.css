@@ -284,4 +284,9 @@ background-image: url(images/index-background.jpg);
   font-weight: 700;
   color: #ffffff;
   text-align: center;
+
+}
+
+.newsletter-catalog {
+  background-color: #000000;
 }
