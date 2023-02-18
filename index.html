@@ -8,9 +8,9 @@
     <title>Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-
+  
   <body>
-
+    <div class="main-page">
     <header class="page-header">
       <a class="navigation-logo" href="index.html">
         <img class="page-header-logo" alt="Логотип сайта Седона" src="images/header/logo.svg" width="140" height="70">
@@ -18,7 +18,7 @@
       <nav class="navigation">
         <ul class="navigation-main-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+            <a class="navigation-link navigation-link-current">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="about.html">О Седоне</a>
@@ -76,19 +76,19 @@
                 alt="Отели Седоны">
             </div>
           </li>
-          <li class="advantages-item advantages-item-white">
+          <li class="advantages-item">
             <div class="advantages-wrapper">
               <h3 class="advantages-title">Небольшая площадь</h3>
               <p class="advantages-description">Все достопримечательности находятся очень близко</p>
             </div>
           </li>
-          <li class="advantages-item advantages-item-sky">
+          <li class="advantages-item">
             <div class="advantages-wrapper">
               <h3 class="advantages-title">Красивая дорога</h3>
               <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
           </li>
-          <li class="advantages-item advantages-item-white">
+          <li class="advantages-item">
             <div class="advantages-wrapper">
               <h3 class="advantages-title">Мало туристов</h3>
               <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
@@ -116,21 +116,21 @@
       <section class="servises">
         <h2 class="visually-hidden">Сервис отелей Седоны</h2>
         <ul class="servises-list">
-          <li class="servises-item advantages-item-sky">
+          <li class="servises-item">
             <div class="servises-logo-image">
               <img class="servises-logo" src="images/house.svg" width="75" height="72">
             </div>
             <h3 class="servises-title">Жильё</h3>
             <p class="servises-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="servises-item advantages-item-white">
+          <li class="servises-item">
             <div class="servises-logo-image">
               <img class="servises-logo" src="images/food.svg" width="74" height="70">
             </div>
             <h3 class="servises-title">Еда</h3>
             <p class="servises-description">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="servises-item advantages-item-sky">
+          <li class="servises-item">
             <div class="servises-logo-image">
               <img class="servises-logo" src="images/surprise.svg" width="64" height="76">
             </div>
@@ -154,8 +154,8 @@
         <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="e-mail">
-            <input class="field" id="e-mail" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
-            <button class="button newsletter-button" type="button">Подписаться</button>
+          <input class="field" id="e-mail" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
+          <button class="button newsletter-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -197,8 +197,8 @@
             height="32">
         </a>
       </section>
-    </footer>
-
+      </footer>
+    </div>
   </body>
 
 </html>
