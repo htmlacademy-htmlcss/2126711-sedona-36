@@ -20,7 +20,13 @@ body {
   line-height: 21px;
   color: #000000;
   background-color: #FFFFFF;
-  text-decoration: none;
+}
+
+.main-wrapper {
+  background-color: #F2F2F2;
+  padding:0 40px 0 40px;
+  margin: 0;
+  box-shadow:: inset;
 }
 
 .button {
@@ -28,12 +34,13 @@ body {
   color: #ffffff;
 }
 
-.main-page {
-  background-color: #F2F2F2;
-}
-
 .page-header {
   background-color: #FFFFFF;
+  display: flex;
+}
+
+.navigation {
+
 }
 
 .navigation-main-list {
@@ -48,7 +55,7 @@ body {
   color: #000000;
 }
 
-.navigation-user-item {
+.navigation-user {
 
 }
 
@@ -112,8 +119,13 @@ body {
   color: #FFFFFF;
 }
 
+.servises {
+
+}
+
 .servises-list {
   list-style-type: none;
+
 }
 
 .servises-logo-image {
