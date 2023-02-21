@@ -13,6 +13,9 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
+  font-display: swap;
+}
 
 body {
   font-family: "PT Sans", Arial, sans-serif;
@@ -26,7 +29,7 @@ body {
   background-color: #F2F2F2;
   padding:0 40px 0 40px;
   margin: 0;
-  box-shadow:: inset;
+  box-shadow: inset;
 }
 
 .button {
@@ -39,9 +42,7 @@ body {
   display: flex;
 }
 
-.navigation {
-
-}
+.navigation
 
 .navigation-main-list {
   list-style-type: none;
@@ -55,9 +56,7 @@ body {
   color: #000000;
 }
 
-.navigation-user {
-
-}
+.navigation-user
 
 .navigation-user-list {
   list-style-type: none;
@@ -119,18 +118,14 @@ body {
   color: #FFFFFF;
 }
 
-.servises {
-
-}
+.servises
 
 .servises-list {
   list-style-type: none;
 
 }
 
-.servises-logo-image {
-
-}
+.servises-logo-image
 
 .servises-title {
   font-size: 28px;
@@ -144,11 +139,9 @@ body {
   line-height: 21px;
 }
 
-.search {
-}
+.search
 
-.newsletter {
-}
+.newsletter
 
 .newsletter-header {
   font-size: 30px;
@@ -184,9 +177,7 @@ body {
   background-color: #82B3D3;
 }
 
-.page-footer {
-
-}
+.page-footer
 
 .footer-social-list {
   list-style-type: none;
@@ -203,7 +194,6 @@ body {
 background-color: #2b73ad;
 color: #ffffff;
 background-image: url("../images/index-background.jpg");
-backdrop-filter: ;
 background-repeat: no-repeat;
 background-size: auto;
 }
