@@ -214,7 +214,7 @@ li.advantages-item:last-child {
 
 .servises-item {
 
-  
+
 }
 
 .servises-title {
@@ -314,6 +314,7 @@ li.advantages-item:last-child {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
 }
 
 .header-container {
@@ -339,12 +340,12 @@ li.advantages-item:last-child {
 }
 
 .catalog-hotels-filter {
-  display: flex;
+
 }
 
 .catalog-filter-title {
   font-size: 20px;
-  line-height: 24;
+  line-height: 24px;
   font-weight: 700;
   padding: 0;
 }
@@ -353,8 +354,13 @@ li.advantages-item:last-child {
   display: flex;
 }
 
+.catalog-filter {
+  display: flex;
+
+}
+
 .catalog-filter-group {
-  margin: 0;
+  margin: 20px 50px;
   padding: 0;
   border: none;
 }
