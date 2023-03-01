@@ -214,6 +214,7 @@ li.advantages-item:last-child {
 
 .servises-item {
 
+  
 }
 
 .servises-title {
@@ -235,6 +236,7 @@ li.advantages-item:last-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .button-search {
@@ -315,7 +317,8 @@ li.advantages-item:last-child {
 }
 
 .header-container {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .inner-header-title {
@@ -343,9 +346,7 @@ li.advantages-item:last-child {
   font-size: 20px;
   line-height: 24;
   font-weight: 700;
-  margin: 0;
   padding: 0;
-  height: 150px;
 }
 
 .catalog-hotels-filter {
@@ -362,8 +363,14 @@ li.advantages-item:last-child {
   background-color: #82B3D3;
 }
 
+.catalog-wrapper {
+  display: flex;
+}
+
 .catalog-filter-list {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-text {
@@ -384,11 +391,16 @@ li.advantages-item:last-child {
 }
 
 .hotel-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, lft);
+  gap: 30px;
   padding: 0;
+  margin: 0;
   list-style-type: none;
+}
+
+.hotel-card {
+  min-width: 0;
 }
 
 .hotel-card-link {
