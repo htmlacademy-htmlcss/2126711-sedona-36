@@ -241,7 +241,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-
+  padding: 80px 85px;
 }
 
 .servises-item:nth-child( odd) {
