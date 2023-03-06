@@ -408,6 +408,10 @@ body {
   margin-bottom: 32px;
 }
 
+.catalog-filter-item {
+  margin-bottom: 16px;
+}
+
 .control {
   display: flex;
   align-items: center;
