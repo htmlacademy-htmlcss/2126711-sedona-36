@@ -49,6 +49,24 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus {
+  background-color: #615048;
+}
+
+.button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
 }
 
 .visually-hidden {
@@ -106,13 +124,25 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
 }
 
 .navigation-user-link {
   display: block;
   padding: 21px 13px;
   margin: 0;
+}
+
+.favourites-number {
+  position: absolute;
+  top: 0;
+  background-color: #7DB54F;
+  color: #FFFFFF;
+  font-size: 10px;
+  line-height: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 5px 5px 5px 4px;
 }
 
 .button-want {
@@ -132,6 +162,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: url("../images/background-border.svg") 1;
 }
 
 .description {
@@ -190,6 +221,7 @@ body {
   color: #FFFFFF;
   width: 100%;
   display: flex;
+  background-image: url(../images/advantages/separator.svg) no-repeat;
 }
 
 .advantages-image {
@@ -334,6 +366,23 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+.newsletter-button:hover {
+  background-color: #68A2CA;
+}
+
+.newsletter-button:focus {
+  background-color: #68A2CA;
+}
+
+.newsletter-button:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-button:disabled {
+  background-color: #E5E5E5;
+}
+
 .page-footer {
   display: flex;
   justify-content: space-evenly;
@@ -354,11 +403,37 @@ body {
   padding: 11px 12px;
 }
 
+.social-icon {
+  color: #000000;
+}
+
+
+.social-icon:hover {
+  color: rgba(104, 162, 202, 0.3);
+}
+
+
+.social-icon:focus {
+  color: #68A2CA;
+}
+
 .footer-contacts-phone {
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
   color: #000000;
+}
+
+.footer-contacts-phone:hover {
+  color: #756157;
+}
+
+.footer-contacts-phone:focus {
+  color: #756157;
+}
+
+.footer-contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 /*    Catalog   */
@@ -456,11 +531,50 @@ body {
   margin-bottom: 32px;
 }
 
+.button-submit:hover {
+  background-color: #68A2CA;
+}
+
+.button-submit:focus {
+  background-color: #68A2CA;
+}
+
+.button-submit:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-submit:disabled {
+  background-color: #E5E5E5;
+}
+
 .button-reset {
   background: transparent;
   background-color: none;
   border: none;
   padding: 8px 57px;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  background-color: none;
+}
+
+.button-reset:focus {
+  border: solid 3px #83B3D3;
+  background: transparent;
+  background-color: none;
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+  background: transparent;
+  background-color: none;
+}
+
+.button-reset:disabled {
+  background-color: #E5E5E5;
 }
 
 .catalog-wrapper {
@@ -511,6 +625,21 @@ body {
   height: 48px;
   width: 48px;
   border-radius: 4px;
+}
+
+.button-light:hover {
+  border-color: #000000;
+  background-color: none;
+}
+
+.button-light:focus {
+  border-color: #68A2CA;
+  background-color: none;
+}
+
+.button-light:active {
+  border-color: #000000;
+  background-color: none;
 }
 
 .button-light:last-child {
@@ -605,6 +734,23 @@ body {
   margin-left: auto;
 }
 
+.button-in-favourites:hover {
+  background-color: #68A2CA;
+}
+
+.button-in-favourites:focus {
+  background-color: #68A2CA;
+}
+
+.button-in-favourites:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-in-favourites:disabled {
+  background-color: #E5E5E5;
+}
+
 .pagination {
   list-style-type: none;
   display: flex;
@@ -635,6 +781,19 @@ body {
   font-weight: 700;
   background-color: #82B3D3;
   border-radius: 4px;
+}
+
+.pagination-link:hover {
+  background-color: #68A2CA;
+}
+
+.pagination-link:focus {
+  background-color: #68A2CA;
+}
+
+.pagination-link:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-current {
