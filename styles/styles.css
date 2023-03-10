@@ -48,6 +48,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  border-radius: 4px;
 }
 
 .visually-hidden {
@@ -316,6 +317,7 @@ body {
   padding: 14px 20px;
   border: none;
   background-color: #F2F2F2;
+  border-radius: 4px 0 0 4px;
 }
 
 .newsletter-button {
@@ -329,6 +331,7 @@ body {
   padding: 8px 50px;
   width: 252px;
   height: 52px;
+  border-radius: 0 4px 4px 0;
 }
 
 .page-footer {
@@ -493,6 +496,7 @@ body {
   width: 292px;
   height: 48px;
   margin-right: 70px;
+  border-radius: 4px;
 }
 
 .button-wrapper {
@@ -506,6 +510,7 @@ body {
   margin-right: 8px;
   height: 48px;
   width: 48px;
+  border-radius: 4px;
 }
 
 .button-light:last-child {
@@ -575,6 +580,7 @@ body {
   width: 140px;
   height: 37px;
   margin-left: auto;
+  border-radius: 4px;
 }
 
 .rating-text {
@@ -613,7 +619,7 @@ body {
   text-align: center;
 }
 
-.pagination-item.pagination-text-item {
+.pagination-text-item {
   background-color: #FFFFFF;
   padding: 17px 21px;
   font-weight: 700;
@@ -628,6 +634,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   background-color: #82B3D3;
+  border-radius: 4px;
 }
 
 .pagination-current {
@@ -641,4 +648,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.field {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
 }
