@@ -71,7 +71,7 @@
           <ul class="advantages-list">
             <li class="advantages-item advantages-item-blue">
               <div class="advantages-wrapper">
-                <h3 class="advantages-title">Настоящий городок</h3>
+                <h3 class="advantages-title-blue">Настоящий городок</h3>
                 <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <div class="advantages-image">
@@ -103,7 +103,7 @@
                   alt="Каньоны в Седоне">
               </div>
               <div class="advantages-wrapper">
-                <h3 class="advantages-title">Там есть мост дьявола</h3>
+                <h3 class="advantages-title-blue">Там есть мост дьявола</h3>
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
@@ -151,7 +151,7 @@
           <p class="search-header">Заинтересовались?</p>
           <p class="search-text">Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="button button-search" href="#">Поиск гостиницы в Седоне</a>
+          <button class="button button-search" type="button" onclick="window.modalwindow.showModal();">Поиск гостиницы в Седоне</button>
         </section>
 
         <section class="newsletter">
@@ -229,19 +229,20 @@
           </a>
         </section>
       </footer>
-            <!--
-      <div class="modal-container">
-        <div class="modal modal-search">
-          <section class="modal-content">
-            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          </section>
 
-          <button class="modal-close-button">
+      <dialog id="modalwindow">
+        <div class="modal-container">
+          <div class="modal modal-search">
+            <section class="modal-content">
+              <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            </section>
+
+            <button class="modal-close-button" type="button" onclick="window.modalwindow.close();">
               <span class="visually-hidden">Закрыть</span>
-          </button>
+            </button>
 
-          <section class="search-forms">
-            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <section class="search-forms">
+              <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
               <ul class="modal-list">
                 <li class="modal-item">
                   <label class="date">
@@ -264,13 +265,13 @@
                   </label>
                   <label class="people-value">
                     <span class="modal-legend">Дети:</span>
-                    <span class="tooltip">
-                      <button class="tooltip-toggle" type="button">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <span class="tooltip">
+                        <button class="tooltip-toggle" type="button">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white"/>
-                        </svg>
-                      </button>
-                    <span class="tooltip-text" role="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                          </svg>
+                        </button>
+                      <span class="tooltip-text" role="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                     </span>
                     <input type="number" name="children" value="1" min="1" max="10" step="1">
                   </label>
@@ -278,10 +279,11 @@
               </ul>
 
               <button class="button button-find" type="submit">Найти</button>
-            </form>
-          </section>
+              </form>
+            </section>
+          </div>
         </div>
-      </div> -->
+      </dialog>
     </div>
   </body>
 

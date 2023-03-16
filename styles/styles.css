@@ -279,6 +279,17 @@ body {
   position: relative;
 }
 
+.advantages-title-blue {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 62px;
+  max-width: 175px;
+  position: relative;
+}
+
 .advantages-title::before {
   position: absolute;
   content: '';
@@ -290,7 +301,7 @@ body {
   bottom: -30px;
 }
 
-.advantages-title.advantages-item-blue::before {
+.advantages-title-blue::before {
   position: absolute;
   content: '';
   height: 2px;
@@ -405,7 +416,7 @@ body {
   text-decoration: none;
   background-color: #756157;
   padding: 8px 50px;
-
+  border: none;
 }
 
 .newsletter {
@@ -595,11 +606,27 @@ body {
 
 .breadcrumbs-item {
   margin-right: 11px;
+  position: relative;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
+  position: relative;
+}
+
+.breadcrumbs-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("../images/breadcrambs-icon-arrow.svg");
+
+}
+
+.breadcrumbs-item:last-child .breadcrumbs-link::after {
+  content: none;
 }
 
 .catalog-filter-title {
@@ -1108,10 +1135,6 @@ body {
   z-index: 10;
 }
 
-.modal-container-close {
-  display: none;
-}
-
 .modal-search {
   width: 717px;
   height: 576px;
@@ -1136,6 +1159,23 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+
+.modal-close-button:disabled {
+  background-color: #E5E5E5;
 }
 
 .modal-title {
