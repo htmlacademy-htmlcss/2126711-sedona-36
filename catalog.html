@@ -13,7 +13,8 @@
     <div class="page-container">
       <header class="page-header">
         <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" alt="Логотип сайта Седона." src="images/header/logo.svg" width="140" height="70">
+          <img class="page-header-logo" alt="Логотип сайта Седона." src="images/header/logo.svg" width="140"
+            height="70">
         </a>
         <nav class="navigation">
           <ul class="navigation-main-list">
@@ -24,27 +25,27 @@
               <a class="navigation-link" href="about.html">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current">Гостиницы</a>
+              <a class="navigation-link  navigation-link-current" href="#">Гостиницы</a>
             </li>
           </ul>
         </nav>
 
         <nav class="navigation-user">
           <ul class="navigation-user-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
+            <li class="navigation-user-item">
+              <a class="navigation-user-link" href="#">
                 <span class="visually-hidden">Поиск</span>
                 <img class="pin-title" src="images/header/search.svg" width="18" height="18">
               </a>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
+            <li class="navigation-user-item">
+              <a class="navigation-user-link" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <img class="pin-title" src="images/header/heart.svg" width="18" height="17">
-                <p class="favourites-number">12</p>
               </a>
+              <p class="favourites-number">12</p>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-user-item">
               <a class="button button-want" href="#">Хочу сюда!</a>
             </li>
           </ul>
@@ -77,19 +78,19 @@
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="control-checkbox" type="checkbox" name="waterpool" value="waterpool" checked>
-                      <span class="catalog-text">Бассейн</span>
+                      <span class="control-text-checkbox">Бассейн</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="control-checkbox" type="checkbox" name="parking" value="parking" checked>
-                      <span class="catalog-text">Парковка</span>
+                      <span class="control-text-checkbox">Парковка</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="control-checkbox" type="checkbox" name="wi-fi" value="wi-fi">
-                      <span class="catalog-text">Wi-Fi</span>
+                      <span class="control-text-checkbox">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -101,19 +102,19 @@
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="control-radio" type="radio" name="houses-types" value="hotel" checked>
-                      <span class="catalog-text">Гостиница</span>
+                      <span class="control-text-radio">Гостиница</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="control-radio" type="radio" name="houses-types" value="motel">
-                      <span class="catalog-text">Мотель</span>
+                      <span class="control-text-radio">Мотель</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="control-radio" type="radio" name="houses-types" value="apartments">
-                      <span class="catalog-text">Апартаменты</span>
+                      <span class="control-text-radio">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
@@ -132,10 +133,10 @@
                 <div class="range">
                   <div class="range-scale">
                     <div class="range-bar">
-                      <button class="range-toggle toggle-min">
+                      <button class="range-toggle toggle-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
-                      <button class="range-toggle toggle-max">
+                      <button class="range-toggle toggle-max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену.</span>
                       </button>
                     </div>
@@ -203,7 +204,7 @@
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 5000 ₽</p>
               <a class="button button-detailed" href="#">Подробнее</a>
-              <a class="button button-in-favourites" href="#">В избранное</a>
+              <a class="button button-on-favourites" href="#">В избранном</a>
               <div class="rating-image">
                 <img class="rating-star" src="images/catalog/four-stars.svg">
               </div>

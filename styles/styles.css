@@ -177,7 +177,7 @@ body {
 .welcome {
   background-color: #82B3D3;
   color: #000000;
-  background-image: url("../images/index-background.jpg"), url("../images/index-border.svg");
+  background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 485px;
@@ -196,6 +196,8 @@ body {
   background-size: cover;
   position: absolute;
   width: 100%;
+  height: 57px;
+  bottom: 0;
 }
 
 .description {
@@ -266,6 +268,13 @@ body {
 
 .advantages-image {
   display: flex;
+  height: 100%;
+}
+
+.advantages-picture {
+  width: calc(100%-400px);
+  height: 100%;
+  object-fit: cover;
 }
 
 .advantages-title {
@@ -274,7 +283,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 62px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
   max-width: 175px;
   position: relative;
 }
@@ -285,7 +295,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 62px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
   max-width: 175px;
   position: relative;
 }
@@ -298,7 +309,7 @@ body {
   width: 60px;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -30px;
+  bottom: 0;
 }
 
 .advantages-title-blue::before {
@@ -309,7 +320,7 @@ body {
   width: 60px;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -30px;
+  bottom: 0;
 }
 
 .advantages-description {
@@ -346,6 +357,7 @@ body {
 .servises-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -474,7 +486,7 @@ body {
   color: #FFFFFF;
   background-color: #82B3D3;
   border: none;
-  padding: 8px 50px;
+  padding: 8px;
   width: 232px;
   height: 52px;
   border-radius: 0 4px 4px 0;
@@ -605,27 +617,27 @@ body {
 }
 
 .breadcrumbs-item {
-  margin-right: 11px;
+  margin-right: 28px;
   position: relative;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
-  position: relative;
 }
 
-.breadcrumbs-link::after {
+.breadcrumbs-link::before {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
   background-image: url("../images/breadcrambs-icon-arrow.svg");
-
+  width: 8px;
+  height: 11px;
+  top: 6px;
+  right: -19px;
 }
 
-.breadcrumbs-item:last-child .breadcrumbs-link::after {
+.breadcrumbs-item:last-child .breadcrumbs-link::before {
   content: none;
 }
 
@@ -646,36 +658,58 @@ body {
   display: block;
 }
 
+.control-text-checkbox {
+  font-size: 18px;
+  line-height: 23px;
+  padding-left: 36px;
+}
+
 .control-checkbox {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-.control-checkbox+label {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-}
-
-.control-checkbox+label::before {
+.control-text-checkbox::before {
   content: '';
-  display: inline-block;
+  position: absolute;
   width: 20px;
   height: 20px;
-  flex-grow: 0;
-  border: none;
-  border-radius: 4px;
-  margin-right: 16px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-  background-color: #FFFFFF
+  left: 0;
+  background-color: #FFFFFF;
+  border-radius: 5px;
 }
 
-.control-checkbox:checked+label::before {
+.control-text-checkbox::before:hover {
+  background-color: #FFFFFF;
+}
+
+.control-text-checkbox::before:focus {
+  border: 3px solid #83B3D3;
+  box-shadow: 0 4 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.control-text-checkbox::before:active {
+  border: 2px solid #83B3D3;
+  box-shadow: 0 4 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.control-text-checkbox::before:disabled {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 7 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.control-checkbox:checked + .control-text-checkbox::before {
   background-image: url("../images/tick.svg");
   background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-text-radio {
+  font-size: 18px;
+  line-height: 23px;
+  padding-left: 36px;
 }
 
 .control-radio {
@@ -684,13 +718,29 @@ body {
   opacity: 0;
 }
 
+.control-text-radio::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.control-radio:checked + .control-text-radio::before {
+  background-image: url("../images/radio-dote.svg");
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .catalog-hotels-filter {
   display: flex;
 }
 
 .catalog-filter {
   display: flex;
-
 }
 
 .catalog-filter-group {
@@ -771,11 +821,6 @@ body {
   margin: 0;
 }
 
-.catalog-text {
-  font-size: 18px;
-  line-height: 23px;
-}
-
 .catalog-header {
   font-size: 30px;
   line-height: 36px;
@@ -815,13 +860,14 @@ body {
 }
 
 .button-light {
-  display: block;
-  padding: 14px;
   border: solid 2px #E5E5E5;
   margin-right: 8px;
   height: 48px;
   width: 48px;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-light:hover {
@@ -948,6 +994,31 @@ body {
 }
 
 .button-in-favourites:disabled {
+  background-color: #E5E5E5;
+}
+
+.button-on-favourites {
+  background-color: #7DB54F;
+  padding: 8px 18px;
+  width: 140px;
+  height: 36px;
+  margin-left: auto;
+}
+
+.button-on-favourites:hover {
+  background-color: #6C9E42;
+}
+
+.button-on-favourites:focus {
+  background-color: #6C9E42;
+}
+
+.button-on-favourites:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-on-favourites:disabled {
   background-color: #E5E5E5;
 }
 
@@ -1122,6 +1193,8 @@ body {
   margin: 0;
 }
 
+/* Модальное окно */
+
 .modal-container {
   position: fixed;
   top: 0;
@@ -1131,7 +1204,7 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(242, 242, 242, 0.8);
   z-index: 10;
 }
 
@@ -1178,6 +1251,10 @@ body {
   background-color: #E5E5E5;
 }
 
+.search-forms {
+  display: flex;
+}
+
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
@@ -1193,16 +1270,12 @@ body {
 }
 
 .modal-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 23px;
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.modal-item {
-  display: flex;
-  flex-wrap: nowrap;
 }
 
 .modal-legend {
@@ -1249,12 +1322,11 @@ body {
   background-color: #E5E5E5;
 }
 
-
-
 .tooltip {
   width: 26px;
   height: 26px;
   position: relative;
+  margin: 0;
 }
 
 .tooltip-toggle {
@@ -1265,6 +1337,7 @@ body {
   height: 26px;
   padding: 0;
   margin: 0;
+  margin-right: 0;
   display: block;
 }
 
