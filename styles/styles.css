@@ -534,10 +534,7 @@ body {
   color: #83B3D3;
 }
 
-.social-icon:hover {
-  color: #68A2CA;
-}
-
+.social-icon:hover,
 .social-icon:focus {
   color: #68A2CA;
 }
@@ -553,10 +550,7 @@ body {
   color: #000000;
 }
 
-.footer-contacts-phone:hover {
-  color: #756157;
-}
-
+.footer-contacts-phone:hover,
 .footer-contacts-phone:focus {
   color: #756157;
 }
@@ -571,10 +565,7 @@ body {
   cursor: pointer;
 }
 
-.htmlacademy-button:hover {
-  color: #756157;
-}
-
+.htmlacademy-button:hover,
 .htmlacademy-button:focus {
   color: #756157;
 }
@@ -662,6 +653,7 @@ body {
   font-size: 18px;
   line-height: 23px;
   padding-left: 36px;
+  cursor: pointer;
 }
 
 .control-checkbox {
@@ -680,21 +672,21 @@ body {
   border-radius: 5px;
 }
 
-.control-text-checkbox::before:hover {
+.control-checkbox:hover + .control-text-checkbox::before {
   background-color: #FFFFFF;
 }
 
-.control-text-checkbox::before:focus {
+.control-checkbox:focus + .control-text-checkbox::before {
   border: 3px solid #83B3D3;
   box-shadow: 0 4 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.control-text-checkbox::before:active {
+.control-checkbox:active + .control-text-checkbox::before {
   border: 2px solid #83B3D3;
   box-shadow: 0 4 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.control-text-checkbox::before:disabled {
+.control-checkbox:disabled + .control-text-checkbox::before {
   background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 7 15px 0 rgba(0, 0, 0, 0.25);
 }
@@ -710,12 +702,32 @@ body {
   font-size: 18px;
   line-height: 23px;
   padding-left: 36px;
+  cursor: pointer;
 }
 
 .control-radio {
   position: absolute;
   z-index: -1;
   opacity: 0;
+}
+
+.control-radio:hover + .control-text-radio::before {
+  background-color: #FFFFFF;
+}
+
+.control-radio:focus + .control-text-radio::before {
+  border: 3px solid #83B3D3;
+  box-shadow: 0 4 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.control-radio:active + .control-text-radio::before {
+  border: 2px solid #83B3D3;
+  box-shadow: 0 4 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.control-radio:disabled + .control-text-radio::before {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 7 15px 0 rgba(0, 0, 0, 0.25);
 }
 
 .control-text-radio::before {
@@ -763,10 +775,7 @@ body {
   margin-top: 56px;
 }
 
-.button-submit:hover {
-  background-color: #68A2CA;
-}
-
+.button-submit:hover,
 .button-submit:focus {
   background-color: #68A2CA;
 }
