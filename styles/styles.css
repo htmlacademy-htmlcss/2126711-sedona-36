@@ -848,6 +848,7 @@ body {
   height: 48px;
   margin-right: 70px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .select-control:hover {
@@ -1090,6 +1091,10 @@ body {
   padding: 96px 258px 104px;
 }
 
+.catalog-filter-label {
+
+}
+
 .range-scale {
   position: relative;
   height: 4px;
@@ -1140,13 +1145,15 @@ body {
 .range-input-min {
   width: 143px;
   height: 48px;
-  margin-right: 2px;
   padding: 12px 20px;
   border-radius: 4px 0 0 4px;
   border: none;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 .range-input-min:hover {
@@ -1173,6 +1180,9 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 .range-input-max:hover {
@@ -1226,6 +1236,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
 .modal-close-button {
@@ -1287,10 +1298,16 @@ body {
   padding: 0;
 }
 
+.modal-item {
+  display: flex;
+  align-items: center;
+}
+
 .modal-legend {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+
 }
 
 .date-field {
@@ -1302,6 +1319,48 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.number {
+  display: flex;
+}
+
+.input-number {
+	height: 48px;
+	width: 31px;
+	margin: 0;
+  padding-left: 7px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+	appearance: textfield;
+  background-color: #F2F2F2;
+  color: #000000;
+  border: none;
+}
+
+.number-minus {
+  width: 40px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: rgba(117, 97, 87, 0.3);
+  background-color: #F2F2F2;
+  border-radius: 4px 0 0 4px;
+  margin-left: 46px;
+}
+.number-plus {
+  width: 40px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: rgba(117, 97, 87, 0.3);
+  background-color: #F2F2F2;
+  border-radius: 0 4px 4px 0;
 }
 
 .button-find {
@@ -1331,11 +1390,14 @@ body {
   background-color: #E5E5E5;
 }
 
+/* Тултип */
+
 .tooltip {
   width: 26px;
   height: 26px;
   position: relative;
   margin: 0;
+  margin-left: 10px;
 }
 
 .tooltip-toggle {
@@ -1365,7 +1427,7 @@ body {
   bottom: 100%;
   margin-bottom: 6px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-49%);
   z-index: 1;
 }
 
@@ -1377,13 +1439,13 @@ body {
 .tooltip-text:after {
   content:'';
   background-image: url("../images/tooltip-arrow.svg");
-  width: 14px;
+  width: 16px;
   height: 6px;
   position:absolute;
   transform: rotate(180deg);
   top: 100%;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
 }
