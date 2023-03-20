@@ -1246,7 +1246,7 @@ body {
   border-radius: 50%;
   border: none;
   position: absolute;
-  right: 40px;
+  right: 44px;
   top: 70px;
   background-image: url("../images/close.svg");
   background-repeat: no-repeat;
@@ -1272,7 +1272,7 @@ body {
 }
 
 .search-forms {
-  display: flex;
+
 }
 
 .modal-title {
@@ -1301,6 +1301,7 @@ body {
 .modal-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .modal-legend {
