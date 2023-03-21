@@ -116,6 +116,16 @@ body {
   color: #000000;
 }
 
+.navigation-link:hover,
+.navigation-link:focus {
+  background-color: #F2F2F2;
+}
+
+.navigation-link:active {
+  background-color: #F2F2F2;
+  color: #82B3D3;
+}
+
 .navigation-link-current {
   position: relative;
 }
@@ -152,6 +162,18 @@ body {
   display: block;
   padding: 21px 13px;
   margin: 0;
+  width: 44px;
+  color: #000000;
+}
+
+.navigation-user-link:hover,
+.navigation-user-link:focus {
+  background-color: #F2F2F2;
+}
+
+.navigation-user-link:active {
+  background-color: #F2F2F2;
+  color: #82B3D3;
 }
 
 .favourites-number {
@@ -466,7 +488,7 @@ body {
   text-align: center;
 }
 
-.field {
+.mail-field {
   width: 452px;
   height: 52px;
   padding: 14px 20px;
@@ -476,6 +498,11 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
+}
+
+.mail-field:hover,
+.mail-field:active {
+  border: none;
 }
 
 .newsletter-button {
@@ -1095,6 +1122,11 @@ body {
 
 }
 
+.range-wrapper-inputs {
+  border-radius: 4px;
+  background-color: red;
+}
+
 .range-scale {
   position: relative;
   height: 4px;
@@ -1142,7 +1174,7 @@ body {
   right: -10px;
 }
 
-.range-input-min {
+.range-input {
   width: 143px;
   height: 48px;
   padding: 12px 20px;
@@ -1156,54 +1188,19 @@ body {
   box-shadow: none;
 }
 
-.range-input-min:hover {
+.range-input:hover {
   background-color: #FFFFFF;
   border-radius: 4px 0 0 4px;
 }
 
-.range-input-min:focus {
+.range-input:focus {
   border: 3px solid #83B3D3;
   border-radius: 4px 0 0 4px;
 }
 
-.range-input-min:active {
+.range-input:active {
   border: 2px solid #000000;
   border-radius: 4px 0 0 4px;
-}
-
-.range-input-max {
-  width: 143px;
-  height: 48px;
-  padding: 12px 20px;
-  border-radius: 0 4px 4px 0;
-  border: none;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-}
-
-.range-input-max:hover {
-  background-color: #FFFFFF;
-  border-radius: 0 4px 4px 0;
-}
-
-.range-input-max:focus {
-  border: 3px solid #83B3D3;
-  border-radius: 0 4px 4px 0;
-}
-
-.range-input-max:active {
-  border: 2px solid #000000;
-  border-radius: 0 4px 4px 0;
-}
-
-.range-input-min::-webkit-outer-spin-button,
-.range-input-min::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
 }
 
 .range-input-max::-webkit-outer-spin-button,
@@ -1425,7 +1422,7 @@ body {
   display: none;
   width: 256px;
   position: absolute;
-  bottom: 100%;
+  top: 0;
   margin-bottom: 6px;
   left: 50%;
   transform: translateX(-49%);
