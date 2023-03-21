@@ -1226,7 +1226,6 @@ body {
 
 .modal-search {
   width: 717px;
-  height: 576px;
   background-color: #FFFFFF;
   border-radius: 30px;
   padding: 64px 70px;
@@ -1296,9 +1295,13 @@ body {
 }
 
 .modal-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+}
+
+.modal-item:nth-child(3,4) {
+  width: 50%;
 }
 
 .modal-legend {

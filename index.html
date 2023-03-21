@@ -249,18 +249,20 @@
               <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
               <ul class="modal-list">
                 <li class="modal-item">
-                  <label class="date">
+                  <label class="visually-hidden" for="date-field-1"> Дата заезда</label>
                     <span class="modal-legend">Дата Заезда:</span>
-                    <input class="date-field" type="date"  min="15.03.2023" value="15.03.2023"></input>
-                    <span class="date-text">Мы не можем отправить вас в прошлое.</span>
-                  </label>
+                    <div class="modal-item-wrapper">
+                      <input class="date-field" id="date-field-1" type="date"  min="15.03.2023" value="15.03.2023"></input>
+                      <span class="date-text">Мы не можем отправить вас в прошлое.</span>
+                    </div>
                 </li>
                 <li class="modal-item">
-                  <label class="date">
+                  <label class="visually-hidden" for="date-field-2">Дата выезда</label>
                     <span class="modal-legend">Дата Выезда:</span>
-                    <input class="date-field" type="date" min="16.03.2023" value="16.03.2023"></input>
-                    <span class="date-text">На эти даты есть свободные номера. Пока есть.</span>
-                  </label>
+                    <div class="modal-item-wrapper">
+                      <input class="date-field" id="date-field-2" type="date" min="16.03.2023" value="16.03.2023"></input>
+                      <span class="date-text">На эти даты есть свободные номера. Пока есть.</span>
+                    </div>
                 </li>
                 <li class="modal-item">
                   <span class="modal-legend">Взрослые:</span>
