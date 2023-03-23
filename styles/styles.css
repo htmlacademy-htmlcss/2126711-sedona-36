@@ -500,6 +500,7 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  outline: 0;
 }
 
 .mail-field:hover,
@@ -648,7 +649,7 @@ body {
 }
 
 .breadcrumbs-link::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   background-image: url("../images/breadcrambs-icon-arrow.svg");
@@ -658,8 +659,9 @@ body {
   right: -19px;
 }
 
-.breadcrumbs-item:last-child + .breadcrumbs-link::before {
+.breadcrumbs-item:last-child .breadcrumbs-link::before {
   content: none;
+
 }
 
 .catalog-filter-title {
@@ -703,16 +705,16 @@ body {
 }
 
 .control-checkbox:hover + .control-text-checkbox::before {
-  color:rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.5);
+  color:rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .control-text-checkbox:hover {
-  color:rgba(255, 255, 255, 0.5);
+  color:rgba(255, 255, 255, 0.8);
 }
 
 .control-checkbox:checked + .control-checkbox:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .control-checkbox:focus + .control-text-checkbox::before {
@@ -745,17 +747,17 @@ body {
 }
 
 .control-radio:hover + .control-text-radio::before {
-  color:rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.5);
+  color:rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .control-text-radio:hover {
-  color:rgba(255, 255, 255, 0.5);
+  color:rgba(255, 255, 255, 0.8);
 }
 
 .control-radio:checked:hover {
-  color:rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.5);
+  color:rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .control-radio:focus + .control-text-radio::before {
@@ -1127,11 +1129,13 @@ body {
   padding: 96px 258px 104px;
 }
 
+/* range */
+
 .range-wrapper-inputs {
   border-radius: 4px;
   display: flex;
   gap: 2px;
-  border: solid 2px red;
+
 }
 
 .wrapper-input {
@@ -1154,7 +1158,6 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  appearance: none;
   outline: 0;
   border: solid 2px #FFFFFF;
 }
@@ -1162,18 +1165,15 @@ body {
 .range-input:hover {
   background-color: #E6E6E6;
   border: solid 2px #E6E6E6;
-  appearance: none;
 }
 
 .wrapper-input:focus {
-  appearance: none;
   background-color: #E6E6E6;
   border: solid 2px #83B3D3;
 }
 
 .wrapper-input:active {
-  appearance: none;
-  border: solid 2px #000000;
+  box-shadow: inset 0 0 0 3px #000000;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1184,7 +1184,6 @@ body {
 
 .range-input-label::before {
   content: '';
-
 }
 
 .range-scale {
@@ -1236,7 +1235,7 @@ body {
 
 /* Модальное окно */
 
-.modal-container {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -1260,6 +1259,19 @@ body {
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
+.modal-header {
+  position: relative;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
 .modal-close-button {
   width: 52px;
   height: 52px;
@@ -1267,8 +1279,8 @@ body {
   border-radius: 50%;
   border: none;
   position: absolute;
-  right: 44px;
-  top: 70px;
+  right: -10px;
+  top: 5px;
   background-image: url("../images/close.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1292,23 +1304,14 @@ body {
   background-color: #E5E5E5;
 }
 
-.modal-title {
-  margin: 0;
-  margin-bottom: 64px;
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-}
+.modal-content {
 
-.date-text {
-  font-size: 16px;
-  line-height: 21px;
 }
 
 .modal-list {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 23px;
   list-style-type: none;
   margin: 0;
@@ -1316,16 +1319,56 @@ body {
 }
 
 .modal-item {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-item-wrapper::before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/calendar.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  
 }
 
 .modal-legend {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  width: 137px;
+}
 
+.modal-item-half {
+  width: auto;
+  position: relative;
+}
+
+.date-text {
+  color: #333333;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 20px;
+}
+
+.error-text {
+  color: #FF5757;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 20px;
 }
 
 .date-field {
@@ -1337,53 +1380,61 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  outline: 0;
 }
 
 .number {
   display: flex;
+  border-radius: 4px;
+  border: solid 3px red;
+  width: 110px;
+  height: 48px;
 }
 
 .input-number {
-	height: 48px;
 	width: 31px;
 	margin: 0;
   padding-left: 7px;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-	appearance: textfield;
   background-color: #F2F2F2;
   color: #000000;
   border: none;
+  outline: 0;
 }
 
-.number-minus {
-  width: 40px;
-  height: 48px;
+.number-button {
+  height: 100%;
+  min-width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   color: rgba(117, 97, 87, 0.3);
   background-color: #F2F2F2;
-  border-radius: 4px 0 0 4px;
-  margin-left: 46px;
 }
-.number-plus {
-  width: 40px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
+
+.number-button:hover {
+  color: #000000;
+}
+
+.number-button:focus {
+  color: #000000;
+}
+
+.number-button:active {
   color: rgba(117, 97, 87, 0.3);
-  background-color: #F2F2F2;
-  border-radius: 0 4px 4px 0;
+}
+
+.number-button:disabled {
+  background-color: #E5E5E5;
 }
 
 .button-find {
   background-color: #83B3D3;
-  padding: 18px 256px;
+  width: 100%;
+  padding: 18px;
   font-size: 20px;
   line-height: 24px;
   border: none;
@@ -1413,9 +1464,9 @@ body {
 .tooltip {
   width: 26px;
   height: 26px;
-  position: relative;
+  position: absolute;
   margin: 0;
-  margin-left: 10px;
+  left: 25%;
 }
 
 .tooltip-toggle {
@@ -1426,8 +1477,9 @@ body {
   height: 26px;
   padding: 0;
   margin: 0;
-  margin-right: 0;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tooltip-text {
@@ -1442,10 +1494,10 @@ body {
   display: none;
   width: 256px;
   position: absolute;
-  top: 0;
+  top: calc(100% + 15px);
   margin-bottom: 6px;
   left: 50%;
-  transform: translateX(-49%);
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -1456,12 +1508,12 @@ body {
 
 .tooltip-text:after {
   content:'';
-  background-image: url("../images/tooltip-arrow.svg");
   width: 16px;
-  height: 6px;
+  height: 16px;
+  background-color: #333333;
+  transform: rotate(45deg);
   position:absolute;
-  transform: rotate(180deg);
-  top: 100%;
+  top: -5px;
   left: 0;
   right: 0;
   margin-left: auto;
