@@ -688,49 +688,40 @@ body {
   cursor: pointer;
 }
 
-.control-checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
 .control-text-checkbox::before {
   content: '';
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 0;
+  left: 70px;
   background-color: #FFFFFF;
   border-radius: 5px;
 }
 
-.control-checkbox:hover + .control-text-checkbox::before {
-  color:rgba(255, 255, 255, 0.8);
-  background-color: rgba(255, 255, 255, 0.8);
+input:checked + .control-text-checkbox::before {
+  background-image: url("../images/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .control-text-checkbox:hover {
-  color:rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.control-checkbox:checked + .control-checkbox:hover {
+.control-text-checkbox:hover::before {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.control-checkbox:focus + .control-text-checkbox::before {
+input:focus +.control-text-checkbox::before {
   box-shadow: 0 0 0 3px #83B3D3;
 }
 
-.control-checkbox:active + .control-text-checkbox::before {
-  color:rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.5);
+.control-text-checkbox:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.control-checkbox:checked + .control-text-checkbox::before {
-  background-image: url("../images/tick.svg");
-  background-color: #FFFFFF;
-  background-repeat: no-repeat;
-  background-position: center;
+.control-text-checkbox:active::before {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .control-text-radio {
@@ -738,35 +729,6 @@ body {
   line-height: 23px;
   padding-left: 36px;
   cursor: pointer;
-}
-
-.control-radio {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.control-radio:hover + .control-text-radio::before {
-  color:rgba(255, 255, 255, 0.8);
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.control-text-radio:hover {
-  color:rgba(255, 255, 255, 0.8);
-}
-
-.control-radio:checked:hover {
-  color:rgba(255, 255, 255, 0.8);
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.control-radio:focus + .control-text-radio::before {
-  box-shadow: 0 0 0 3px #83B3D3;
-}
-
-.control-radio:active + .control-text-radio::before {
-  color:rgba(255, 255, 255, 0.8);
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .control-text-radio::before {
@@ -779,11 +741,30 @@ body {
   border-radius: 50%;
 }
 
-.control-radio:checked + .control-text-radio::before {
+input:checked + .control-text-radio::before {
   background-image: url("../images/radio-dote.svg");
-  background-color: #FFFFFF;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.control-text-radio:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.control-text-radio:hover::before {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+input:focus +.control-text-radio::before {
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.control-text-radio:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.control-text-radio:active::before {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-hotels-filter {
@@ -1135,7 +1116,7 @@ body {
   border-radius: 4px;
   display: flex;
   gap: 2px;
-
+  overflow: hidden;
 }
 
 .wrapper-input {
@@ -1154,7 +1135,7 @@ body {
 .wrapper-input .range-input {
   width: 143px;
   height: 48px;
-  padding: 12px 20px;
+  padding: 12px 40px 12px 20px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
