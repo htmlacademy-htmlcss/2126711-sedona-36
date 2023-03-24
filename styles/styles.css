@@ -1260,7 +1260,7 @@ input:focus +.control-text-radio::before {
   border-radius: 50%;
   border: none;
   position: absolute;
-  right: -10px;
+  right: -20px;
   top: 5px;
   background-image: url("../images/close.svg");
   background-repeat: no-repeat;
@@ -1303,7 +1303,6 @@ input:focus +.control-text-radio::before {
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
   position: relative;
 }
 
@@ -1331,6 +1330,7 @@ input:focus +.control-text-radio::before {
   line-height: 24px;
   font-weight: 700;
   width: 137px;
+  padding-top: 10px;
 }
 
 .modal-item-half {
@@ -1356,21 +1356,20 @@ input:focus +.control-text-radio::before {
   border: none;
   border-radius: 4px;
   background-color: #F2F2F2;
-  padding: 12px 20px;
+  padding: 12px 40px 12px 20px;
   width: 440px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   outline: 0;
-  margin-top: 23px;
 }
 
 .number {
   display: flex;
   border-radius: 4px;
-  border: solid 3px red;
   width: 110px;
   height: 48px;
+  overflow: hidden;
 }
 
 .input-number {
