@@ -674,10 +674,10 @@ body {
 
 .catalog-filter-item {
   margin-bottom: 16px;
+  position: relative;
 }
 
 .control {
-  position: relative;
   display: block;
 }
 
@@ -693,7 +693,7 @@ body {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 70px;
+  left: 0;
   background-color: #FFFFFF;
   border-radius: 5px;
 }
@@ -1143,24 +1143,23 @@ input:focus +.control-text-radio::before {
   border: solid 2px #FFFFFF;
 }
 
-.range-input:hover {
+.wrapper-input:hover .range-input:hover {
   background-color: #E6E6E6;
   border: solid 2px #E6E6E6;
 }
 
-.wrapper-input:focus {
+.range-input:focus .wrapper-input:focus {
   background-color: #E6E6E6;
-  border: solid 2px #83B3D3;
+  border: solid 3px #83B3D3;
 }
 
-.wrapper-input:active {
-  box-shadow: inset 0 0 0 3px #000000;
+.wrapper-input:active .range-input:active {
+  border: solid 3px #000000;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
-  margin: 0;
 }
 
 .range-input-label::before {
@@ -1320,9 +1319,8 @@ input:focus +.control-text-radio::before {
   width: 20px;
   height: 20px;
   right: 20px;
-  top: 50%;
+  top: 27px;
   transform: translateY(-50%);
-
 }
 
 .modal-legend {
@@ -1331,6 +1329,7 @@ input:focus +.control-text-radio::before {
   font-weight: 700;
   width: 137px;
   padding-top: 10px;
+  display: flex;
 }
 
 .modal-item-half {
@@ -1444,9 +1443,8 @@ input:focus +.control-text-radio::before {
 .tooltip {
   width: 26px;
   height: 26px;
-  position: absolute;
-  margin: 0;
-  left: 25%;
+  margin-left: 10px;
+  position: relative;
 }
 
 .tooltip-toggle {
