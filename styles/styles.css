@@ -451,7 +451,7 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   background-color: #756157;
-  padding: 8px 50px;
+  padding: 8px 25px;
   border: none;
 }
 
@@ -629,6 +629,7 @@ body {
   line-height: 78px;
   font-weight: 700;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs {
@@ -797,9 +798,15 @@ input:focus +.control-text-radio::before {
   background-color: #82B3D3;
   border: none;
   padding: 8px;
-  margin-bottom: 40px;
   margin-top: 56px;
   width: 191px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .button-submit:hover,
@@ -821,7 +828,15 @@ input:focus +.control-text-radio::before {
   background-color: none;
   border: solid 3px transparent;
   padding: 8px 50px;
+  margin-top: 32px;
   width: 191px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .button-reset:hover {
@@ -876,6 +891,7 @@ input:focus +.control-text-radio::before {
   border: solid 2px #E5E5E5;
   width: 292px;
   height: 48px;
+  padding: 12px 12px;
   margin-right: 70px;
   border-radius: 4px;
   cursor: pointer;
@@ -1170,7 +1186,7 @@ input:focus +.control-text-radio::before {
   position: relative;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
-  margin-top: 56px;
+  margin-top: 43px;
 }
 
 .range-bar {
