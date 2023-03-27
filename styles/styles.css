@@ -50,6 +50,7 @@ body {
   text-decoration: none;
   border-radius: 4px;
   cursor: pointer;
+  font-style: inherit;
 }
 
 .button:hover {
@@ -101,6 +102,7 @@ body {
 
 .navigation-main-list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -267,10 +269,6 @@ body {
   width: 400px;
 }
 
-.advantages-wrapper:not(.advantages-item-blue) {
-  padding: 102px 85px;
-}
-
 .advantages-item {
   width: calc(100%/3);
   display: flex;
@@ -378,7 +376,7 @@ body {
   margin: 0;
 }
 
-.servises-list {
+.services-list {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -386,7 +384,7 @@ body {
   padding: 0;
 }
 
-.servises-item {
+.services-item {
   max-height: 385px;
   width: calc(100%/3);
   display: flex;
@@ -396,19 +394,19 @@ body {
   padding: 81px 85px;
 }
 
-.servises-item:nth-child( odd) {
+.services-item:nth-child( odd) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.servises-title {
+.services-title {
   font-size: 28px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 30px 0;
+  margin: 102px 0 30px 0;
 }
 
-.servises-description {
+.services-description {
   font-size: 18px;
   line-height: 21px;
   margin: 0;
@@ -451,8 +449,9 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   background-color: #756157;
-  padding: 8px 25px;
+  padding: 8px 50px;
   border: none;
+  font-family: inherit;
 }
 
 .newsletter {
@@ -503,10 +502,19 @@ body {
   outline: 0;
 }
 
-.mail-field:hover,
-.mail-field:active,
-.mail-field:focus {
+.mail-field:hover {
+  background-color: #E6E6E6;
   border: none;
+}
+
+.mail-field:focus {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.mail-field:active {
+  background-color: #F2F2F2;
+  box-shadow: 0 0 0 2px #000000;
 }
 
 .newsletter-button {
@@ -521,6 +529,8 @@ body {
   width: 232px;
   height: 52px;
   border-radius: 0 4px 4px 0;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .newsletter-button:hover {
@@ -559,6 +569,7 @@ body {
 .social-button {
   display: block;
   padding: 11px 12px;
+  cursor: pointer;
 }
 
 .social-icon {
@@ -807,6 +818,7 @@ input:focus +.control-text-radio::before {
   color: #FFFFFF;
   text-transform: uppercase;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .button-submit:hover,
@@ -837,6 +849,7 @@ input:focus +.control-text-radio::before {
   color: #FFFFFF;
   text-transform: uppercase;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .button-reset:hover {
@@ -895,6 +908,7 @@ input:focus +.control-text-radio::before {
   margin-right: 70px;
   border-radius: 4px;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .select-control:hover,
@@ -1021,6 +1035,7 @@ input:focus +.control-text-radio::before {
   padding: 8px 26px;
   width: 140px;
   height: 36px;
+  font-family: inherit;
 }
 
 .button-in-favourites {
@@ -1029,6 +1044,7 @@ input:focus +.control-text-radio::before {
   width: 140px;
   height: 36px;
   margin-left: auto;
+  font-family: inherit;
 }
 
 .button-in-favourites:hover,
@@ -1051,6 +1067,7 @@ input:focus +.control-text-radio::before {
   width: 140px;
   height: 36px;
   margin-left: auto;
+  font-family: inherit;
 }
 
 .button-on-favourites:hover,
@@ -1070,12 +1087,13 @@ input:focus +.control-text-radio::before {
 .pagination {
   list-style-type: none;
   display: flex;
-  margin: 40px 70px 60px;
-  padding: 0;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0 70px;
 }
 
 .pagination-item {
-  margin-right: 8px;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -1097,6 +1115,7 @@ input:focus +.control-text-radio::before {
   font-weight: 700;
   background-color: #82B3D3;
   border-radius: 4px;
+  font-family: inherit;
 }
 
 .pagination-link:not(.pagination-current):hover {
@@ -1115,6 +1134,7 @@ input:focus +.control-text-radio::before {
 .pagination-current {
   background-color: #F2F2F2;
   color: #000000;
+  font-family: inherit;
 }
 
 .newsletter-catalog {
@@ -1156,21 +1176,20 @@ input:focus +.control-text-radio::before {
   line-height: 24px;
   font-weight: 700;
   outline: 0;
-  border: solid 2px #FFFFFF;
+  border: none;
 }
 
 .wrapper-input:hover .range-input:hover {
   background-color: #E6E6E6;
-  border: solid 2px #E6E6E6;
 }
 
 .range-input:focus .wrapper-input:focus {
   background-color: #E6E6E6;
-  border: solid 3px #83B3D3;
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 
 .wrapper-input:active .range-input:active {
-  border: solid 3px #000000;
+  box-shadow: inset 0 0 0 3px #000000;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1377,6 +1396,22 @@ input:focus +.control-text-radio::before {
   line-height: 24px;
   font-weight: 700;
   outline: 0;
+  font-family: inherit;
+}
+
+.date-field:hover {
+  background-color: #E6E6E6;
+  border: none;
+}
+
+.date-field:focus {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.date-field:active {
+  background-color: #F2F2F2;
+  box-shadow: 0 0 0 2px #000000;
 }
 
 .number {
@@ -1429,12 +1464,13 @@ input:focus +.control-text-radio::before {
 .button-find {
   background-color: #83B3D3;
   width: 100%;
-  padding: 18px;
+  padding: 18px 256px;
   font-size: 20px;
   line-height: 24px;
   border: none;
   margin-top: 48px;
   border-radius: 10px;
+  font-family: inherit;
 }
 
 .button-find:hover {
