@@ -103,9 +103,11 @@ body {
 .navigation-main-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 500px;
   list-style-type: none;
   margin: 0;
   padding: 0;
+
 }
 
 .navigation-link {
@@ -261,10 +263,11 @@ body {
 }
 
 .advantages-wrapper {
-  padding: 112px 85px;
+  padding: 85px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 385px;
   width: 400px;
 }
@@ -399,11 +402,11 @@ body {
 }
 
 .services-title {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 102px 0 30px 0;
+  margin: 103px 0 30px 0;
 }
 
 .services-description {
@@ -464,7 +467,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
-  padding: 96px 258px 104px;
+  padding: 97px 258px 104px;
 }
 
 .newsletter-form {
@@ -485,7 +488,7 @@ body {
   line-height: 26px;
   max-width: 475px;
   margin: 0;
-  margin-bottom: 54px;
+  margin-bottom: 55px;
   text-align: center;
 }
 
@@ -507,14 +510,14 @@ body {
   border: none;
 }
 
-.mail-field:focus {
-  background-color: #E6E6E6;
-  box-shadow: 0 0 0 3px #83B3D3;
+.mail-field:not(:invalid):focus {
+  background-color: #F2F2F2;
+  box-shadow: inset 0 0 0 2px #000000;
 }
 
-.mail-field:active {
-  background-color: #F2F2F2;
-  box-shadow: 0 0 0 2px #000000;
+.mail-field:focus {
+  background-color: #E6E6E6;
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 
 .newsletter-button {
@@ -803,13 +806,14 @@ input:focus +.control-text-radio::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap:32px;
+  padding-top: 56px;
 }
 
 .button-submit {
   background-color: #82B3D3;
   border: none;
   padding: 8px;
-  margin-top: 56px;
   width: 191px;
   border-radius: 4px;
   font-size: 16px;
@@ -837,10 +841,8 @@ input:focus +.control-text-radio::before {
 
 .button-reset {
   background: transparent;
-  background-color: none;
   border: solid 3px transparent;
   padding: 8px 50px;
-  margin-top: 32px;
   width: 191px;
   border-radius: 4px;
   font-size: 16px;
@@ -964,9 +966,21 @@ input:focus +.control-text-radio::before {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 0 70px;
+  padding: 0 70px 40px;
   margin: 0;
   list-style-type: none;
+  position: relative;
+}
+
+.hotel-list::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 140px);
+  background-color: #E6E6E6;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hotel-card {
@@ -1090,7 +1104,7 @@ input:focus +.control-text-radio::before {
   flex-wrap: wrap;
   gap: 8px;
   margin: 0;
-  padding: 0 70px;
+  padding: 40px 70px 60px;
 }
 
 .pagination-item {
@@ -1356,6 +1370,7 @@ input:focus +.control-text-radio::before {
   right: 20px;
   top: 27px;
   transform: translateY(-50%);
+  fill: #83B3D3;
 }
 
 .modal-legend {
@@ -1379,11 +1394,8 @@ input:focus +.control-text-radio::before {
   padding-left: 20px;
 }
 
-.error-text {
+.error {
   color: #FF5757;
-  font-size: 16px;
-  line-height: 21px;
-  padding-left: 20px;
 }
 
 .date-field {
@@ -1420,6 +1432,7 @@ input:focus +.control-text-radio::before {
   width: 110px;
   height: 48px;
   overflow: hidden;
+  position: relative;
 }
 
 .input-number {
@@ -1443,14 +1456,22 @@ input:focus +.control-text-radio::before {
   border: none;
   color: rgba(117, 97, 87, 0.3);
   background-color: #F2F2F2;
+  position: relative;
+  cursor: pointer;
 }
 
 .number-button:hover {
   color: #000000;
 }
 
-.number-button:focus {
+.number-button:focus::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
   color: #000000;
+  border: solid 3px #83B3D3;
+  border-radius: 4px;
 }
 
 .number-button:active {
