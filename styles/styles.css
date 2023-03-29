@@ -153,18 +153,22 @@ body {
 .navigation-user-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .navigation-user-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
 .navigation-user-link {
   display: block;
-  padding: 21px 13px;
+  padding: 23px 13px 19px;
   margin: 0;
   width: 44px;
   color: #000000;
@@ -183,7 +187,7 @@ body {
 .favourites-number {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 4px;
   background-color: #7DB54F;
   color: #FFFFFF;
   font-size: 10px;
@@ -393,8 +397,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  padding: 183px 81px 85px;
+  align-items: center;
+  padding: 168px 81px 85px;
   position: relative;
 }
 
@@ -407,7 +411,7 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .services-description {
@@ -415,6 +419,7 @@ body {
   line-height: 21px;
   margin: 0;
   max-width: 230px;
+  text-align: center;
 }
 
 .house::before {
@@ -666,7 +671,7 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  padding: 35px 70px 70px;
+  padding: 35px 70px 56px;
 }
 
 .header-container {
@@ -878,7 +883,6 @@ input:focus +.control-text-radio::before {
 
 .button-reset {
   background: transparent;
-  border: solid 3px transparent;
   padding: 8px 50px;
   width: 191px;
   border-radius: 4px;
@@ -889,17 +893,17 @@ input:focus +.control-text-radio::before {
   text-transform: uppercase;
   cursor: pointer;
   font-family: inherit;
+  border: none;
 }
 
 .button-reset:hover {
   color: rgba(255, 255, 255, 0.5);
   background: transparent;
   background-color: none;
-  border: solid 3px transparent;
 }
 
 .button-reset:focus {
-  border: solid 3px #83B3D3;
+  box-shadow: 0 0 0 3px #83B3D3;
   background: transparent;
   background-color: none;
 }
@@ -908,7 +912,6 @@ input:focus +.control-text-radio::before {
   color: rgba(255, 255, 255, 0.3);
   background: transparent;
   background-color: none;
-  border: solid 3px transparent;
 }
 
 .button-reset:disabled {
@@ -943,7 +946,7 @@ input:focus +.control-text-radio::before {
   border: solid 2px #E5E5E5;
   width: 292px;
   height: 48px;
-  padding: 12px 12px;
+  padding: 12px 10px 12px 14px;
   margin-right: 70px;
   border-radius: 4px;
   cursor: pointer;
@@ -1031,7 +1034,8 @@ input:focus +.control-text-radio::before {
 }
 
 .hotel-card-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: #000000;
   grid-column: 1/ -1;
@@ -1067,7 +1071,7 @@ input:focus +.control-text-radio::before {
 
 .rating-text-wrapper {
   background-color: #F2F2F2;
-  padding: 8px 22px;
+  padding: 8px 20px 8px 24px;
   width: 140px;
   height: 37px;
   margin-left: auto;
@@ -1087,6 +1091,10 @@ input:focus +.control-text-radio::before {
   width: 140px;
   height: 36px;
   font-family: inherit;
+}
+
+.rating-image {
+  display: flex;
 }
 
 .button-in-favourites {
@@ -1141,7 +1149,7 @@ input:focus +.control-text-radio::before {
   flex-wrap: wrap;
   gap: 8px;
   margin: 0;
-  padding: 40px 70px 60px;
+  padding: 37px 70px 60px;
 }
 
 .pagination-item {
@@ -1153,7 +1161,9 @@ input:focus +.control-text-radio::before {
 .pagination-text-item {
   background-color: #FFFFFF;
   padding: 17px 21px;
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .pagination-link {
@@ -1291,12 +1301,12 @@ input:focus +.control-text-radio::before {
 
 .toggle-min {
   top: -8px;
-  left: -10px;
+  left: -8px;
 }
 
 .toggle-max {
   top: -8px;
-  right: -10px;
+  right: -18px;
 }
 
 /* Модальное окно */
