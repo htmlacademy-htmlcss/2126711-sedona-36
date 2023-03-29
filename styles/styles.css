@@ -666,7 +666,7 @@ body {
 .inner-header {
   background-color: #82B3D3;
   color: #FFFFFF;
-  background-image: url("../images/catalog-background.jpg");
+  background-image: url("../images/catalog/catalog-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -709,7 +709,7 @@ body {
   content: '';
   display: block;
   position: absolute;
-  background-image: url("../images/breadcrambs-icon-arrow.svg");
+  background-image: url("../images/catalog/breadcrambs-icon-arrow.svg");
   width: 8px;
   height: 11px;
   top: 6px;
@@ -756,7 +756,7 @@ body {
 }
 
 input:checked + .control-text-checkbox::before {
-  background-image: url("../images/tick.svg");
+  background-image: url("../images/catalog/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -799,7 +799,7 @@ input:focus +.control-text-checkbox::before {
 }
 
 input:checked + .control-text-radio::before {
-  background-image: url("../images/radio-dote.svg");
+  background-image: url("../images/catalog/radio-dote.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1357,7 +1357,7 @@ input:focus +.control-text-radio::before {
   position: absolute;
   right: -20px;
   top: 5px;
-  background-image: url("../images/close.svg");
+  background-image: url("../images/modal/close.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -1410,7 +1410,7 @@ input:focus +.control-text-radio::before {
 .modal-item-wrapper::before {
   content: '';
   position: absolute;
-  background-image: url(../images/calendar.svg);
+  background-image: url("../images/modal/calendar.svg");
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
