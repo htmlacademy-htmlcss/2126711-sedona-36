@@ -55,10 +55,7 @@ body {
   font-style: inherit;
 }
 
-.button:hover {
-  background-color: #615048;
-}
-
+.button:hover,
 .button:focus {
   background-color: #615048;
 }
