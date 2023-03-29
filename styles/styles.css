@@ -14,7 +14,9 @@
   font-display: swap;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -501,6 +503,7 @@ body {
 
 .newsletter {
   background-image: url("../images/background-newsletter.jpg");
+  background-color: #3F5E72;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 415px;
