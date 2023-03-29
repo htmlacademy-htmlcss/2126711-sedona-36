@@ -1357,7 +1357,7 @@ input:focus +.control-text-radio::before {
   position: absolute;
   right: -20px;
   top: 5px;
-  background-image: url("../images/modal/close.svg");
+  background-image: url("../images/modal-window/close.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -1378,10 +1378,6 @@ input:focus +.control-text-radio::before {
 
 .modal-close-button:disabled {
   background-color: #E5E5E5;
-}
-
-.modal-content {
-
 }
 
 .modal-list {
@@ -1410,7 +1406,7 @@ input:focus +.control-text-radio::before {
 .modal-item-wrapper::before {
   content: '';
   position: absolute;
-  background-image: url("../images/modal/calendar.svg");
+  background-image: url("../images/modal-window/calendar.svg");
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
