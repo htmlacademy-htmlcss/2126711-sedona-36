@@ -63,8 +63,8 @@
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">
-                  <img class="breadcrumbs-icon" src="images/catalog/home-breadcrumbs.svg" width="12" height="12" alt="Домашняя страница.">
+                <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
+                  <span class="visually-hidden">Домашняя страница.</span>
                 </a>
               </li>
               <li class="breadcrumbs-item">
@@ -169,16 +169,13 @@
             </select>
 
             <div class="button-wrapper">
-              <a href="#" class="button-light button-light-current ">
-                <img class="button-light-icon" src="images/catalog/button-light-icon-1.svg" width="16" height="14" alt="Показать карточки.">
+              <a href="#" class="button-light button-light-cards button-light-current ">
                 <span class="visually-hidden">Показать карточки.</span>
               </a>
-              <a href="#" class="button-light">
-                <img class="button-light-icon" src="images/catalog/button-light-icon-2.svg" width="16" height="14" alt="Показать полностью.">
+              <a href="#" class="button-light button-light-full">
                 <span class="visually-hidden">Показать полностью.</span>
               </a>
-              <a href="#" class="button-light">
-                <img class="button-light-icon" src="images/catalog/button-light-icon-3.svg" width="16" height="14" alt="Показать список.">
+              <a href="#" class="button-light button-light-list">
                 <span class="visually-hidden">Показать список.</span>
               </a>
             </div>
@@ -196,7 +193,7 @@
               <a class="button button-detailed" href="#">Подробнее</a>
               <a class="button button-in-favourites" href="#">В избранное</a>
               <div class="rating-image">
-                <img class="rating-star" src="images/catalog/four-stars.svg" alt="4 звезды.">
+                <img class="rating-star" src="images/catalog/four-stars.svg" width="140" height="37" alt="4 звезды.">
               </div>
               <div class="rating-text-wrapper">
                 <span class="rating-text">Рейтинг: 8,5</span>
@@ -213,7 +210,7 @@
               <a class="button button-detailed" href="#">Подробнее</a>
               <a class="button button-on-favourites" href="#">В избранном</a>
               <div class="rating-image">
-                <img class="rating-star" src="images/catalog/four-stars.svg" alt="4 звезды.">
+                <img class="rating-star" src="images/catalog/four-stars.svg" width="140" height="37" alt="4 звезды.">
               </div>
               <div class="rating-text-wrapper">
                 <span class="rating-text">Рейтинг: 9,2</span>
@@ -230,7 +227,7 @@
               <a class="button button-detailed" href="#">Подробнее</a>
               <a class="button button-in-favourites" href="#">В избранное</a>
               <div class="rating-image">
-                <img class="rating-star" src="images/catalog/three-stars.svg" alt="3 звезды.">
+                <img class="rating-star" src="images/catalog/three-stars.svg" width="140" height="37" alt="3 звезды.">
               </div>
               <div class="rating-text-wrapper">
                 <span class="rating-text">Рейтинг: 6,9</span>
@@ -247,7 +244,7 @@
               <a class="button button-detailed" href="#">Подробнее</a>
               <a class="button button-in-favourites" href="#">В избранное</a>
               <div class="rating-image">
-                <img class="rating-star" src="images/catalog/two-stars.svg" alt="2 звезды.">
+                <img class="rating-star" src="images/catalog/two-stars.svg" width="140" height="37" alt="2 звезды.">
               </div>
               <div class="rating-text-wrapper">
                 <span class="rating-text">Рейтинг: 5,0</span>
@@ -280,7 +277,7 @@
 
         <section class="newsletter-catalog">
           <h2 class="newsletter-header">Подпишитесь на рассылку</h2>
-          <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="newsletter-text-2">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="e-mail">E-mail</label>
             <input class="mail-field" id="e-mail" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
