@@ -1109,6 +1109,7 @@ input:focus + .control-text-radio::before {
   border-radius: 4px;
   cursor: pointer;
   font-family: inherit;
+  background-color: #FFFFFF;
 }
 
 .select-control:hover,
