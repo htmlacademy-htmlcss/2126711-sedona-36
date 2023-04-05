@@ -428,6 +428,14 @@ body {
   font-size: 18px;
   line-height: 21px;
   margin: 0;
+  color: #333333;
+}
+
+.advantages-description-blue {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+  color: #FFFFFF;
 }
 
 .description-invitation {
